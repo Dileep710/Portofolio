@@ -131,6 +131,30 @@ section{
 .cert-cisco:hover {
     transform: scale(1.04);
 }
+
+.cert-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.cert-oracle,
+.cert-cloud,
+.cert-cisco {
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 6px;
+    color: white;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+.cert-oracle:hover,
+.cert-cloud:hover,
+.cert-cisco:hover {
+    transform: scale(1.04);
+}
 footer{
     box-shadow:0 -5px 20px rgba(0,0,0,0.4);
 }
@@ -181,4 +205,5 @@ footer{
         opacity:1;
         transform:translateY(0);
     }
+
 }
