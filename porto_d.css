@@ -124,6 +124,7 @@ section{
     background-color: black;
     border-radius: 6px;
     color: white;
+    width: 350px;
     transition: transform 0.3s ease;
 }
 .cert-oracle:hover,
@@ -207,3 +208,4 @@ footer{
     }
 
 }
+
