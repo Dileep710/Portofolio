@@ -224,38 +224,22 @@
     </form>
     <p class="mt-4">&copy; 2026 Dileep Prasanth N Y</p>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+        document.getElementById("contact-form").addEventListener("submit", function(event){
+            event.preventDefault();
 
-<script>
-(function(){
-    emailjs.init("YOUR_PUBLIC_KEY");
-})();
-</script>
-<script>
-document.getElementById("contact-form").addEventListener("submit", function(event){
-    event.preventDefault();
-    let name = document.getElementById("yourName").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("your_msg").value.trim();
-    if(name !== "" && email !== "" && message !== ""){
-        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID",{
-            from_name: name,
-            from_email: email,
-            message: message
-        })
-        .then(function(){
-            alert("Message Sent Successfully ✅");
-            document.getElementById("contact-form").reset();
-        })
-        .catch(function(error){
-            alert("Failed to send message ❌");
-            console.error(error);
+            let name = document.getElementById("yourName").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("your_msg").value;
+            if(name!=="" &&email!==""&&message!==""){
+                alert("Message Submitted");
+                this.reset();
+            }else{
+                alert("Please fill all fields");
+            }
         });
-    }else{
-        alert("Please fill all fields");
-    }
-});
-</script>
+    </script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </script>
     <!-- <script>
@@ -276,5 +260,6 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     </script> -->
 </body>
 </html>
+
 
 
