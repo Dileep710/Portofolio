@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background:linear-gradient(to left, #3160d6, black, #5da5ed);
+    padding-top:70px;
+    color:white;
+}
+.navbar{
+    backdrop-filter: blur(10px);
+    box-shadow:0 2px 15px rgba(0,0,0,0.4);
+}
+.navbar-brand{
+    font-size:20px;
+    letter-spacing:1px;
+}
+.nav-link{
+    transition:0.3s;
+}
+.nav-link:hover{
+    color:yellow !important;
+}
+.hero{
+    min-height:100vh;
+    text-align:center;
+    animation:fadeIn 1s ease-in-out;
+}
+.hero h1{
+    font-weight:600;
+}
+.hero .btn{
+    transition:0.3s;
+}
+.hero .btn:hover{
+    transform:translateY(-3px);
+}
+.section-divider{
+    height:4px;
+    background:white;
+}
+section{
+    animation:fadeUp 0.8s ease-in-out;
+}
+.card{
+    border:none;
+    transition:0.4s;
+}
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+.card-title{
+    font-weight:600;
+}
+#skills .card{
+    border-radius:15px;
+}
+.list-group-item{
+    border:none;
+    margin-bottom:15px;
+    border-radius:12px;
+    transition:0.3s;
+}
+.list-group-item:hover{
+    transform:translateX(8px);
+    background:#1c1c1c;
+    color:white;
+}
+#project .btn{
+    transition:0.3s;
+}
+#project .btn:hover{
+    transform:scale(1.05);
+}
+.accordion-button{
+    font-weight:600;
+}
+.accordion-button:not(.collapsed){
+    background-color:#222;
+    color:white;
+}
+.accordion-body{
+    background:#111;
+    color:white;
+}
+.focus-ring{
+    transition:0.3s;
+}
+.focus-ring:hover{
+    background:yellow;
+    color:black !important;
+    transform:translateY(-5px);
+}
+#certifications {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    background:linear-gradient(to left, #3160d6, black, #5da5ed);
+}
+
+#certifications h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.cert-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.cert-oracle,
+.cert-cloud,
+.cert-cisco {
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 6px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.cert-oracle:hover,
+.cert-cloud:hover,
+.cert-cisco:hover {
+    transform: scale(1.04);
+}
+footer{
+    box-shadow:0 -5px 20px rgba(0,0,0,0.4);
+}
+#contact-form input,
+#contact-form textarea{
+    border:none;
+    border-radius:8px;
+}
+#contact-form input:focus,
+#contact-form textarea:focus{
+    box-shadow:0 0 8px yellow;
+}
+#contact-form button{
+    transition:0.3s;
+}
+#contact-form button:hover{
+    transform:translateY(-3px);
+}
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:22px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    #contact-form{
+        width:90% !important;
+    }
+
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
