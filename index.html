@@ -224,22 +224,26 @@
     </form>
     <p class="mt-4">&copy; 2026 Dileep Prasanth N Y</p>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("YOUR_PUBLIC_KEY");
+})();
+</script>
+<script>
 document.getElementById("contact-form").addEventListener("submit", function(event){
     event.preventDefault();
-
     let name = document.getElementById("yourName").value.trim();
     let email = document.getElementById("email").value.trim();
     let message = document.getElementById("your_msg").value.trim();
-    if(name !== "" && email !== "" && message !== "")
-    {
+    if(name !== "" && email !== "" && message !== ""){
         emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID",{
             from_name: name,
             from_email: email,
             message: message
         })
-        .then(function(response){
+        .then(function(){
             alert("Message Sent Successfully ✅");
             document.getElementById("contact-form").reset();
         })
@@ -251,6 +255,8 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         alert("Please fill all fields");
     }
 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </script>
     <!-- <script>
         document.getElementById("contact-form").addEventListener("submit", function(event){
@@ -270,4 +276,5 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     </script> -->
 </body>
 </html>
+
 
